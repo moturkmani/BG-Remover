@@ -1,0 +1,51 @@
+# UTF-8
+#
+# PyInstaller version-info file for BG Remover Pro.
+#
+# This does NOT set the .exe's icon (that's the separate --icon flag) — it
+# only fills in the metadata Windows shows under Explorer > right-click the
+# exe > Properties > Details (Product name, File description, Version, etc).
+#
+# Use it with:
+#   python -m pyinstaller --onefile --noconsole --icon=imageicon.ico ^
+#       --version-file=version.txt ^
+#       --add-data "imageicon.ico;." --add-data "imageicon.png;." ^
+#       removebg.py
+#
+# Bump the version numbers below (both filevers and prodvers, and the
+# matching FileVersion/ProductVersion strings) each time you build a new
+# release, then rebuild.
+
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    # filevers / prodvers are 4-part tuples: (major, minor, patch, build)
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,       # VOS_NT_WINDOWS32
+    fileType=0x1,     # VFT_APP
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          u'040904B0',  # US English, Unicode
+          [
+            StringStruct(u'CompanyName', u''),
+            StringStruct(u'FileDescription', u'BG Remover Pro \u2014 background removal tool built on the remove.bg API'),
+            StringStruct(u'FileVersion', u'1.0.0.0'),
+            StringStruct(u'InternalName', u'removebg'),
+            StringStruct(u'LegalCopyright', u''),
+            StringStruct(u'OriginalFilename', u'removebg.exe'),
+            StringStruct(u'ProductName', u'BG Remover Pro'),
+            StringStruct(u'ProductVersion', u'1.0.0.0'),
+          ]
+        )
+      ]
+    ),
+    VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
+  ]
+)
