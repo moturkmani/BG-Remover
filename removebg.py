@@ -12,7 +12,7 @@ Requirements:
     pip install requests Pillow
 
 Run:
-    python bg_remover_pro.py
+    python removebg.py
 
 On first run you'll be asked for your remove.bg API key (get one free at
 https://www.remove.bg/api -> Get API Key). It's saved locally so you only
@@ -25,10 +25,9 @@ Window / app icon:
     first when running on Windows.
 
 Packaging as a Windows .exe (PyInstaller):
-    pip install pyinstaller
-    pyinstaller --onefile --noconsole --icon=imageicon.ico ^
-        --add-data "imageicon.ico;." --add-data "imageicon.png;." ^
-        bg_remover_pro.py
+    pip install PyInstaller
+    python -m PyInstaller --onefile --noconsole --icon=imageicon.ico
+    --version-file=version.txt --add-data "imageicon.ico;." --add-data "imageicon.png;." removebg.py
 
     --icon sets the .exe file's own icon (what Explorer/taskbar/desktop
     shortcuts show for the exe itself) — this needs imageicon.ico.
